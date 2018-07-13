@@ -1,0 +1,59 @@
+doctype html
+html(lang='ru')
+	title Funbox test
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, user-scalable=yes')
+	link(href='./css/style.css', rel='stylesheet')
+	body
+		.goods
+			.goods__row
+				.goods--title Ты сегодня покормил кота?
+				.goods__grid(data-goods)
+					.goods__item.goods__item_is-default(data-goods-item='1')
+						.item-goods.has-hover(data-goods-link='1')
+							.item-goods__content
+								.item-goods--subtitle.item-goods--subtitle_add Сказочное заморское яство
+								.item-goods--subtitle.item-goods--subtitle_remove Котэ не одобряет?
+								.item-goods--title Нямушка #[span с фуа-гра]
+								ul.item-goods--list
+									li #[strong 10] порций
+									li мышь в подарок
+							span.item-goods--size 0,5 #[span кг]
+							img.item-goods--pic(src='./pic/goods-1.png', width='298', height='269', alt='')
+							include ./img/item-goods-bg.svg
+						.goods--tip.goods--tip_default Чего сидишь? Порадуй котэ, #[span(data-goods-link='1') купи</span>].
+						.goods--tip.goods--tip_selected Печень утки разварная с артишоками.
+						.goods--tip.goods--tip_disabled Печалька, с фуа-гра закончился.
+					.goods__item.goods__item_is-selected(data-goods-item='2')
+						.item-goods.has-hover(data-goods-link='2')
+							.item-goods__content
+								.item-goods--subtitle.item-goods--subtitle_add Сказочное заморское яство
+								.item-goods--subtitle.item-goods--subtitle_remove Котэ не одобряет?
+								.item-goods--title Нямушка #[span с рыбой]
+								ul.item-goods--list
+									li #[strong 40] порций
+									li #[strong 2] мыши в подарок
+							span.item-goods--size 2 #[span кг]
+							img.item-goods--pic(src='./pic/goods-1.png', width='298', height='269', alt='')
+							include ./img/item-goods-bg.svg
+						.goods--tip.goods--tip_default Чего сидишь? Порадуй котэ, #[span(data-goods-link='2') купи</span>].
+						.goods--tip.goods--tip_selected Головы щучьи с чесноком да свежайшая сёмгушка.
+						.goods--tip.goods--tip_disabled Филе из цыплят с трюфелями в бульоне.
+					.goods__item.goods__item_is-disabled(data-goods-item='3')
+						.item-goods(data-goods-link='3')
+							.item-goods__content
+								.item-goods--subtitle.item-goods--subtitle_add Сказочное заморское яство
+								.item-goods--subtitle.item-goods--subtitle_remove Котэ не одобряет?
+								.item-goods--title Нямушка #[span с курой]
+								ul.item-goods--list
+									li #[strong 100] порций
+									li #[strong 5] мышь в подарок
+									li заказчик доволен
+							span.item-goods--size 5 #[span кг]
+							img.item-goods--pic(src='./pic/goods-1.png', width='298', height='269', alt='')
+							include ./img/item-goods-bg.svg
+						.goods--tip.goods--tip_default Чего сидишь? Порадуй котэ, #[span(data-goods-link='3') купи</span>].
+						.goods--tip.goods--tip_selected Филе из цыплят с трюфелями в бульоне.
+						.goods--tip.goods--tip_disabled Печалька, с курой закончился.
+		script(src='./js/libs.js')
+		script(src='./js/scripts.js')
